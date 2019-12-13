@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblAmount = new DevExpress.XtraEditors.LabelControl();
-            this.calcAmount = new DevExpress.XtraEditors.CalcEdit();
+            this.lblPrice = new DevExpress.XtraEditors.LabelControl();
+            this.calcPrice = new DevExpress.XtraEditors.CalcEdit();
             this.mruEdit1 = new DevExpress.XtraEditors.MRUEdit();
             this.tbContact = new DevExpress.XtraEditors.MemoEdit();
             this.lblContactInfo = new DevExpress.XtraEditors.LabelControl();
@@ -56,7 +56,7 @@
             this.progressPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbProgress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbProgress.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcAmount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcPrice.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mruEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbContact.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carsDBDataSet)).BeginInit();
@@ -171,23 +171,23 @@
             // 
             this.lblPercentCompleteValue.Appearance.BackColor = System.Drawing.Color.Transparent;
             // 
-            // lblAmount
+            // lblPrice
             // 
-            this.lblAmount.Location = new System.Drawing.Point(16, 183);
-            this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(27, 13);
-            this.lblAmount.TabIndex = 37;
-            this.lblAmount.Text = "Amount:";
+            this.lblPrice.Location = new System.Drawing.Point(16, 183);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(27, 13);
+            this.lblPrice.TabIndex = 37;
+            this.lblPrice.Text = "Price:";
             // 
-            // calcAmount
+            // calcPrice
             // 
-            this.calcAmount.Location = new System.Drawing.Point(96, 180);
-            this.calcAmount.Name = "calcAmount";
-            this.calcAmount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.calcPrice.Location = new System.Drawing.Point(96, 180);
+            this.calcPrice.Name = "calcPrice";
+            this.calcPrice.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.calcAmount.Size = new System.Drawing.Size(100, 20);
-            this.calcAmount.TabIndex = 38;
-            this.calcAmount.EditValueChanged += new System.EventHandler(this.calcAmount_EditValueChanged);
+            this.calcPrice.Size = new System.Drawing.Size(100, 20);
+            this.calcPrice.TabIndex = 38;
+            this.calcPrice.EditValueChanged += new System.EventHandler(this.calcPrice_EditValueChanged);
             // 
             // mruEdit1
             // 
@@ -225,17 +225,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 382);
             this.Controls.Add(this.mruEdit1);
-            this.Controls.Add(this.lblAmount);
+            this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblContactInfo);
             this.Controls.Add(this.tbContact);
-            this.Controls.Add(this.calcAmount);
+            this.Controls.Add(this.calcPrice);
             this.MinimumSize = new System.Drawing.Size(506, 294);
             this.Name = "MyAppointmentForm";
             this.Text = "MyAppointmentForm";
-            this.Controls.SetChildIndex(this.calcAmount, 0);
+            this.Controls.SetChildIndex(this.calcPrice, 0);
             this.Controls.SetChildIndex(this.tbContact, 0);
             this.Controls.SetChildIndex(this.lblContactInfo, 0);
-            this.Controls.SetChildIndex(this.lblAmount, 0);
+            this.Controls.SetChildIndex(this.lblPrice, 0);
             this.Controls.SetChildIndex(this.mruEdit1, 0);
             this.Controls.SetChildIndex(this.edtShowTimeAs, 0);
             this.Controls.SetChildIndex(this.edtEndTime, 0);
@@ -280,7 +280,7 @@
             this.progressPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbProgress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbProgress)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calcAmount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calcPrice.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mruEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbContact.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carsDBDataSet)).EndInit();
@@ -291,8 +291,8 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.LabelControl lblAmount;
-        private DevExpress.XtraEditors.CalcEdit calcAmount;
+        private DevExpress.XtraEditors.LabelControl lblPrice;
+        private DevExpress.XtraEditors.CalcEdit calcPrice;
         private DevExpress.XtraEditors.MRUEdit mruEdit1;
         private DevExpress.XtraEditors.MemoEdit tbContact;
         private DevExpress.XtraEditors.LabelControl lblContactInfo;

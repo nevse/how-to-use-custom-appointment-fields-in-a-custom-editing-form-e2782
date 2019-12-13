@@ -34,12 +34,12 @@ namespace SimpleCustomFields {
         }
 
         protected void UpdateCustomFieldEditors() {
-            calcAmount.Value = ((MyAppointmentFormController)base.Controller).Amount;
+            calcPrice.Value = ((MyAppointmentFormController)base.Controller).Price;
             tbContact.Text = ((MyAppointmentFormController)base.Controller).ContactInfo;
         }
 
-        private void calcAmount_EditValueChanged(object sender, EventArgs e) {
-            ((MyAppointmentFormController)base.Controller).Amount = calcAmount.Value;
+        private void calcPrice_EditValueChanged(object sender, EventArgs e) {
+            ((MyAppointmentFormController)base.Controller).Price = calcPrice.Value;
         }
 
         private void tbContact_EditValueChanged(object sender, EventArgs e) {
@@ -53,14 +53,14 @@ namespace SimpleCustomFields {
             : base(control, apt) {
         }
         #region #CustomFieldProperties
-        public decimal Amount {
+        public decimal Price {
             get {
-                if (base.EditedAppointmentCopy.CustomFields["Amount"] != null)
-                    return Convert.ToDecimal(base.EditedAppointmentCopy.CustomFields["Amount"]);
+                if (base.EditedAppointmentCopy.CustomFields["Price"] != null)
+                    return Convert.ToDecimal(base.EditedAppointmentCopy.CustomFields["Price"]);
                 else return 0.0M;
             }
             set {
-                base.EditedAppointmentCopy.CustomFields["Amount"] = value;
+                base.EditedAppointmentCopy.CustomFields["Price"] = value;
             }
         }
         public string ContactInfo {
@@ -74,16 +74,16 @@ namespace SimpleCustomFields {
             }
         }
 
-        public decimal SourceAmount {
+        public decimal SourcePrice {
             get {
                 
-                if (base.SourceAppointment.CustomFields["Amount"] != null)
-                    return Convert.ToDecimal(base.SourceAppointment.CustomFields["Amount"]);
+                if (base.SourceAppointment.CustomFields["Price"] != null)
+                    return Convert.ToDecimal(base.SourceAppointment.CustomFields["Price"]);
                 else
                     return (decimal)0;
             }
             set {
-                base.SourceAppointment.CustomFields["Amount"] = value;
+                base.SourceAppointment.CustomFields["Price"] = value;
             }
         }
         public string SourceContactInfo {
@@ -104,13 +104,13 @@ namespace SimpleCustomFields {
         public override bool IsAppointmentChanged() {
             if (base.IsAppointmentChanged())
                 return true;
-            return SourceAmount != Amount ||
+            return SourcePrice != Price ||
                 SourceContactInfo != ContactInfo;
         }
         #endregion #IsAppointmentChanged
         #region #ApplyCustomFieldsValues
         protected override void ApplyCustomFieldsValues() {
-            base.SourceAppointment.CustomFields["Amount"] = Amount;
+            base.SourceAppointment.CustomFields["Price"] = Price;
             base.SourceAppointment.CustomFields["ContactInfo"] = ContactInfo;
             base.ApplyCustomFieldsValues();
         }

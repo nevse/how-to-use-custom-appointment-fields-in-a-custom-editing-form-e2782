@@ -65,7 +65,7 @@ namespace SimpleCustomFields
             // 
             // schedulerStorage1
             // 
-            this.schedulerDataStorage1.Appointments.CustomFieldMappings.Add(new DevExpress.XtraScheduler.AppointmentCustomFieldMapping("Amount", "Price"));
+            this.schedulerDataStorage1.Appointments.CustomFieldMappings.Add(new DevExpress.XtraScheduler.AppointmentCustomFieldMapping("Price", "Price"));
             this.schedulerDataStorage1.Appointments.CustomFieldMappings.Add(new DevExpress.XtraScheduler.AppointmentCustomFieldMapping("ContactInfo", "ContactInfo"));
             this.schedulerDataStorage1.Appointments.DataSource = this.carSchedulingBindingSource;
             this.schedulerDataStorage1.Appointments.Mappings.AllDay = "AllDay";
